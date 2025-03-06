@@ -27,7 +27,7 @@ class Profile(Base):
      id=Column(Integer,primary_key=True)
      bio=Column(String)
      location=Column(String)
-     student_id=Column(Integer,ForeignKey('students.id'),primary_key=True)
+     student_id=Column(Integer,ForeignKey('students.id'))
 
      student=relationship("Student", back_populates="profile")
 
